@@ -9,6 +9,7 @@ public class AppInitV1Servlet implements AppInit{
     public void onStartup(ServletContext servletContext) {
         System.out.println("AppInitV1Servlet.onStartup");
         System.out.println("servletContext = " + servletContext);
+
         ServletRegistration.Dynamic helloServlet = servletContext.addServlet("helloServlet", new HelloServlet());
         helloServlet.addMapping("/hello-servlet");
     }
